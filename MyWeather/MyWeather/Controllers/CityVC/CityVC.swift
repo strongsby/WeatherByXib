@@ -39,11 +39,7 @@ final class CityVC: UIViewController {
     }
 
     private func bind() {
-        viewModel.reloadData = { [weak self] in
-            self?.tableView.reloadData()
-        }
-        viewModel.showAllert = self.showAlert(title:message:)
-        viewModel.showMainVC = self.showMainVC(city:)
+        viewModel.delegate = self
     }
     
     // MARK: - Lifecycle
@@ -64,16 +60,6 @@ final class CityVC: UIViewController {
     @objc func ofButtonDidTapped(){
         navigationItem.setRightBarButton(arrayOfBarButtons[0], animated: false)
         tableView.setEditing(false, animated: true)
-    }
-    
-    private func showMainVC(city: String) {
-        let mainVC = MainVC(nibName: "\(MainVC.self)", bundle: nil)
-        mainVC.viewModel = MainViewModel.init(updateLocation: false)
-        mainVC.viewModel.city = city
-        self.searchBar.text = nil
-        self.searchBar.resignFirstResponder()
-        self.navigationController?.present(mainVC, animated: true, completion: nil)
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -135,4 +121,24 @@ extension CityVC: UISearchBarDelegate, UISearchDisplayDelegate {
 extension CityVC: AlertHandler { }
 
 
+extension CityVC: CityVCModelDelegate {
+    func cityVCReloadData() {
+        tableView.reloadData()
+    }
+    
+    func cityVCShowAllert(title: String, message: String) {
+        showAlert(title: title, message: message)
+    }
+    
+    func cityVCShowMainVC(city: String) {
+        let mainVC = MainVC(nibName: "\(MainVC.self)", bundle: nil)
+        mainVC.viewModel = MainViewModel.init(updateLocation: false)
+        mainVC.viewModel.city = city
+        self.searchBar.text = nil
+        self.searchBar.resignFirstResponder()
+        self.navigationController?.present(mainVC, animated: true, completion: nil)
+    }
+    
+    
+}
 

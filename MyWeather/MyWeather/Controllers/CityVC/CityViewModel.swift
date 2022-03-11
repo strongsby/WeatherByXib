@@ -8,10 +8,8 @@ import CoreLocation
 
 protocol CityViewModelProtocol: NSObject {
     
+    var delegate: CityVCModelDelegate? { get set }
     var result: [WeatherCoreData] { get set }
-    var showAllert: ((_: String , _: String) -> Void)? { get set }
-    var reloadData: (() -> Void)? { get set }
-    var showMainVC: ((_: String) -> Void)? { get set }
     func sheskCity(city: String?) -> Void
 }
 
@@ -20,14 +18,11 @@ final class CityViewModel: NSObject,CityViewModelProtocol {
     
     // MARK: - Properties
     
+    var delegate: CityVCModelDelegate?
     private var networcManager = NetworkManager()
     private var fetchedResultsController: NSFetchedResultsController<WeatherCoreData>!
-    var showAllert: ((_: String , _: String) -> Void)?
-    var showMainVC: ((String) -> Void)?
-    var reloadData: (() -> Void)?
-    
     var result: [WeatherCoreData] = [] {
-        didSet { reloadData?() }
+        didSet { delegate?.cityVCReloadData() }
     }
     
     // MARK: - Setups
@@ -47,17 +42,17 @@ final class CityViewModel: NSObject,CityViewModelProtocol {
         guard let city = city else { return }
         CLGeocoder().geocodeAddressString(city) { [weak self] (placeMarc, error) in
             guard let searchCity = placeMarc?.first?.locality else {
-                self?.showAllert?("Sorry", "City error")
+                self?.delegate?.cityVCShowAllert(title: "Sorry", message: "City error")
                 return
             }
             
             let bool = self?.result.contains { $0.city == searchCity }
             guard let bool = bool, !bool else {
-                self?.showAllert?("Sorry", "You have \(searchCity) in your list")
+                self?.delegate?.cityVCShowAllert(title: "Sorry", message: "You have \(searchCity) in your list")
                 return
             }
             
-            self?.showMainVC?(searchCity)
+            self?.delegate?.cityVCShowMainVC(city: searchCity)
         }
     }
     

@@ -12,7 +12,6 @@ protocol MainViewModelProtocol: NSObject {
     var city: String { get set }
     var result: WeatherCoreData? { get set }
     var updateLocation: Bool { get set }
-    var reloadData: (() -> Void)? { get set }
 }
 
 
@@ -21,7 +20,6 @@ final class MainViewModel: NSObject, MainViewModelProtocol {
     // MARK: - Properties
     
     var delegate: MainVCModelDelegate?
-    var reloadData: (() -> Void)?
     var updateLocation = true
     private var locationManager = CLLocationManager()
     private var networcManager = NetworkManager()

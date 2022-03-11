@@ -70,9 +70,6 @@ final class MainVC: UIViewController {
     }
 
     func bind(){
-        viewModel.reloadData = { [weak self] in
-            self?.collectionView.reloadData()
-        }
         viewModel.delegate = self
     }
 
