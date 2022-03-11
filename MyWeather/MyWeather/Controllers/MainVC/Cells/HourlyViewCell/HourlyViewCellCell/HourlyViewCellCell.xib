@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HourlyViewCellCell" id="tJ0-vf-Gkk" customClass="HourlyViewCellCell" customModule="MyWeather" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="203" height="303"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="z1X-Oi-pWW">
+                <rect key="frame" x="0.0" y="0.0" width="203" height="303"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXu-Xi-kMw">
+                        <rect key="frame" x="0.0" y="0.0" width="203" height="101"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="22q-Ry-7iO">
+                        <rect key="frame" x="0.0" y="101" width="203" height="101"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3Q-ey-304">
+                        <rect key="frame" x="0.0" y="202" width="203" height="101"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="F3Q-ey-304" firstAttribute="width" secondItem="eXu-Xi-kMw" secondAttribute="width" id="2Co-Oq-VKn"/>
+                    <constraint firstItem="F3Q-ey-304" firstAttribute="top" secondItem="22q-Ry-7iO" secondAttribute="bottom" id="2sk-K9-WHB"/>
+                    <constraint firstAttribute="trailing" secondItem="eXu-Xi-kMw" secondAttribute="trailing" id="MSi-xp-pQL"/>
+                    <constraint firstItem="22q-Ry-7iO" firstAttribute="top" secondItem="eXu-Xi-kMw" secondAttribute="bottom" id="Qlr-5X-cIk"/>
+                    <constraint firstItem="22q-Ry-7iO" firstAttribute="width" secondItem="eXu-Xi-kMw" secondAttribute="width" id="Qqp-8D-lhP"/>
+                    <constraint firstItem="22q-Ry-7iO" firstAttribute="leading" secondItem="z1X-Oi-pWW" secondAttribute="leading" id="d7e-s5-bYD"/>
+                    <constraint firstItem="eXu-Xi-kMw" firstAttribute="leading" secondItem="z1X-Oi-pWW" secondAttribute="leading" id="ia5-h4-kgr"/>
+                    <constraint firstItem="eXu-Xi-kMw" firstAttribute="top" secondItem="z1X-Oi-pWW" secondAttribute="top" id="kKm-bH-FnE"/>
+                    <constraint firstItem="F3Q-ey-304" firstAttribute="leading" secondItem="z1X-Oi-pWW" secondAttribute="leading" id="pRr-21-MBE"/>
+                    <constraint firstAttribute="bottom" secondItem="F3Q-ey-304" secondAttribute="bottom" id="prF-iT-puP"/>
+                    <constraint firstAttribute="trailing" secondItem="22q-Ry-7iO" secondAttribute="trailing" id="qpZ-4l-ITe"/>
+                    <constraint firstItem="F3Q-ey-304" firstAttribute="height" secondItem="eXu-Xi-kMw" secondAttribute="height" id="tfG-B4-Odi"/>
+                    <constraint firstItem="22q-Ry-7iO" firstAttribute="height" secondItem="eXu-Xi-kMw" secondAttribute="height" id="u0b-gC-c7E"/>
+                    <constraint firstAttribute="trailing" secondItem="F3Q-ey-304" secondAttribute="trailing" id="xu7-S0-HrN"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <color key="backgroundColor" red="0.13725490196078433" green="0.38823529411764707" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <size key="customSize" width="203" height="303"/>
+            <connections>
+                <outlet property="image" destination="22q-Ry-7iO" id="FrQ-IZ-qFE"/>
+                <outlet property="tempLable" destination="F3Q-ey-304" id="aLr-gW-7yp"/>
+                <outlet property="timeLable" destination="eXu-Xi-kMw" id="SLj-XZ-AaE"/>
+            </connections>
+            <point key="canvasLocation" x="213.768115942029" y="134.26339285714286"/>
+        </collectionViewCell>
+    </objects>
+</document>
