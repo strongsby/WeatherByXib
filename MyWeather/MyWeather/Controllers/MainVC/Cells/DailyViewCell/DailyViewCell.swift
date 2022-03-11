@@ -9,11 +9,6 @@ import UIKit
 
 final class DailyViewCell: UICollectionViewCell {
     
-    static let identifire = "\(DailyViewCell.self)"
-    static var nib: UINib {
-        UINib(nibName: "\(DailyViewCell.self)", bundle: nil)
-    }
-    
     // MARK: - Outlets
     
     @IBOutlet private weak var dayLable: UILabel!
@@ -34,3 +29,6 @@ final class DailyViewCell: UICollectionViewCell {
         }
     }
 }
+
+
+extension DailyViewCell: WeatherNibLoadable {}

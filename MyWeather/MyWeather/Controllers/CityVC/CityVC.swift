@@ -35,7 +35,7 @@ final class CityVC: UIViewController {
     }
 
     private func tableViewRegistrCells(){
-        tableView.register(Cell.nib, forCellReuseIdentifier: Cell.identifire)
+        tableView.register(Cell.defaultNib, forCellReuseIdentifier: Cell.reuseIdentifier)
     }
 
     private func bind() {

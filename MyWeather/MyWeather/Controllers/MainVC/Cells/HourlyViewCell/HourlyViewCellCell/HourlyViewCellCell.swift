@@ -9,11 +9,6 @@ import UIKit
 
 final class HourlyViewCellCell: UICollectionViewCell {
     
-    static let identifire = "\(HourlyViewCellCell.self)"
-    static var nib: UINib {
-        UINib(nibName: "\(HourlyViewCellCell.self)", bundle: nil)
-    }
-    
     // MARK: - Properties
     
     @IBOutlet private weak var timeLable: UILabel!
@@ -31,3 +26,5 @@ final class HourlyViewCellCell: UICollectionViewCell {
     }
 }
 
+
+extension HourlyViewCellCell: WeatherNibLoadable {}

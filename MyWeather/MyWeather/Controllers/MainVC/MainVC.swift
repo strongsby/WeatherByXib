@@ -36,9 +36,9 @@ final class MainVC: UIViewController {
     // MARK: - Register Cells
 
     private func collectionViewRegisterCell(){
-        collectionView.register( DailyViewCell.nib , forCellWithReuseIdentifier: DailyViewCell.identifire)
-        collectionView.register(SectionHeader.nib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.identifire)
-        collectionView.register(HourlyViewCell.nib, forCellWithReuseIdentifier: HourlyViewCell.identifire)
+        collectionView.register( DailyViewCell.defaultNib , forCellWithReuseIdentifier: DailyViewCell.reuseIdentifier)
+        collectionView.register(SectionHeader.defaultNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.reuseIdentifier)
+        collectionView.register(HourlyViewCell.defaultNib, forCellWithReuseIdentifier: HourlyViewCell.reuseIdentifier)
     }
 
     // MARK: - funcs

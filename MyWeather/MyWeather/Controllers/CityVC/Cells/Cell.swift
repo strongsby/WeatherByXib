@@ -8,12 +8,7 @@
 import UIKit
 
 final class Cell: UITableViewCell {
-    
-    static let identifire = "\(Cell.self)"
-    static var nib: UINib {
-        UINib(nibName: "\(Cell.self)", bundle: nil) 
-    }
-    
+
     // MARK: - Outlets
     
     @IBOutlet private weak var nameCityLable: UILabel!
@@ -32,3 +27,4 @@ final class Cell: UITableViewCell {
 }
 
 
+extension Cell: WeatherNibLoadable {}

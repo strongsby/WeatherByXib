@@ -8,11 +8,6 @@
 import UIKit
 
 final class SectionHeader: UICollectionReusableView {
-    
-    static let identifire = "\(SectionHeader.self)"
-    static var nib: UINib {
-        UINib(nibName: "\(SectionHeader.self)", bundle: nil)
-    }
 
     // MARK: - Outlets
     
@@ -26,3 +21,6 @@ final class SectionHeader: UICollectionReusableView {
         image.image = headerImage
         }
     }
+
+
+extension SectionHeader: WeatherNibLoadable {}

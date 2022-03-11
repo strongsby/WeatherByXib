@@ -3,12 +3,7 @@
 import UIKit
 
 final class HourlyViewCell: UICollectionViewCell {
-    
-    static let identifire = "\(HourlyViewCell.self)"
-    static var nib: UINib {
-        UINib(nibName: "\(HourlyViewCell.self)", bundle: nil)
-    }
-    
+        
     // MARK: - Properties
     
     @IBOutlet private weak var collectionView: UICollectionView! {
@@ -25,7 +20,7 @@ final class HourlyViewCell: UICollectionViewCell {
     // MARK: - Funcs
 
     private func collectionViewRegisterCell(){
-        collectionView.register(HourlyViewCellCell.nib, forCellWithReuseIdentifier: HourlyViewCellCell.identifire)
+        collectionView.register(HourlyViewCellCell.defaultNib , forCellWithReuseIdentifier: HourlyViewCellCell.reuseIdentifier)
     }
     
     func updateAll(hourlyArray: [CurrentCoreData]){
@@ -43,7 +38,7 @@ extension HourlyViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HourlyViewCellCell.identifire, for: indexPath) as! HourlyViewCellCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HourlyViewCellCell.reuseIdentifier, for: indexPath) as! HourlyViewCellCell
         cell.updateAll(hourlyArray: self.hourlyArray[indexPath.item])
         return cell
     }
@@ -62,6 +57,9 @@ extension HourlyViewCell: UICollectionViewDelegateFlowLayout {
         return 1.0
     }
 }
+
+
+extension HourlyViewCell: WeatherNibLoadable {}
 
 
 
