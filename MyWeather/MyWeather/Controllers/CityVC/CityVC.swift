@@ -72,7 +72,7 @@ final class CityVC: UIViewController {
 
 extension CityVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.result.count
+        return viewModel.getResultCount()
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -132,13 +132,10 @@ extension CityVC: CityVCModelDelegate {
     
     func cityVCShowMainVC(city: String) {
         let mainVC = MainVC(nibName: "\(MainVC.self)", bundle: nil)
-        mainVC.viewModel = MainViewModel.init(updateLocation: false)
-        mainVC.viewModel.city = city
+        mainVC.viewModel = MainViewModel(city: city)
         self.searchBar.text = nil
         self.searchBar.resignFirstResponder()
         self.navigationController?.present(mainVC, animated: true, completion: nil)
     }
-    
-    
 }
 

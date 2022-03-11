@@ -10,6 +10,7 @@ protocol CityViewModelProtocol: NSObject {
     
     var delegate: CityVCModelDelegate? { get set }
     var result: [WeatherCoreData] { get set }
+    func getResultCount() -> Int
     func sheskCity(city: String?) -> Void
 }
 
@@ -37,6 +38,10 @@ final class CityViewModel: NSObject,CityViewModelProtocol {
     }
     
     // MARK: - funcs
+    
+    func getResultCount() -> Int {
+        return result.count
+    }
     
     func sheskCity(city: String?) {
         guard let city = city else { return }

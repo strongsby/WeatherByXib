@@ -9,9 +9,9 @@ import CoreData
 
 protocol MainViewModelProtocol: NSObject {
     var delegate: MainVCModelDelegate? { get set }
-    var city: String { get set }
     var result: WeatherCoreData? { get set }
     var updateLocation: Bool { get set }
+    func getDailyCount() -> Int
 }
 
 
@@ -24,26 +24,9 @@ final class MainViewModel: NSObject, MainViewModelProtocol {
     private var locationManager = CLLocationManager()
     private var networcManager = NetworkManager()
     private var fetchedResultsController: NSFetchedResultsController<WeatherCoreData>!
-    
     var result: WeatherCoreData? {
         didSet { delegate?.mainVCCollectionViewReloadData() }
         }
-    
-    var city: String = "" {
-        didSet {
-            self.updateLocation = false
-            networcManager.fetchWeatherWithCity(sity: city) { Weather, error in
-                if let error = error {
-                    self.delegate?.mainVCShowAllert(title: "Sorry", message: "\(error)")
-                } else if let Weather = Weather {
-                    Weather.createCoreDataWeather(active: false) { coreWeather in
-                        self.result = coreWeather
-                    }
-                    CoreDataService.shared.saveContext()
-                }
-            }
-        }
-    }
     
     // MARK: - Setups
     
@@ -72,6 +55,26 @@ final class MainViewModel: NSObject, MainViewModelProtocol {
         }
     }
     
+    //MARK: - funcs
+    
+    func getDailyCount() -> Int {
+        return result?.daily?.count ?? 0
+    }
+    
+    private func fetchWeatherWithCity(city: String) {
+        networcManager.fetchWeatherWithCity(sity: city) { Weather, error in
+            if let error = error {
+                self.delegate?.mainVCShowAllert(title: "Sorry", message: "\(error)")
+            } else if let Weather = Weather {
+                Weather.createCoreDataWeather(active: false) { coreWeather in
+                    self.result = coreWeather
+                }
+                CoreDataService.shared.saveContext()
+            }
+        }
+    }
+    
+    
     //MARK: - Backup
     
     private func loadWeatherCoreData(){
@@ -90,9 +93,10 @@ final class MainViewModel: NSObject, MainViewModelProtocol {
         setupLocationManager()
     }
     
-    init (updateLocation: Bool) {
+    init (city: String) {
         super.init()
         self.updateLocation = false
+        self.fetchWeatherWithCity(city: city)
     }
 }
 

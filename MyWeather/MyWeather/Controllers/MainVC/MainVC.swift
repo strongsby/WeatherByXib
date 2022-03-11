@@ -97,10 +97,10 @@ extension MainVC: UICollectionViewDataSource, UICollectionViewDelegate {
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard let result = viewModel.result else { return 0 }
+        guard viewModel.result != nil else { return 0 }
         switch section {
         case 0: return 1
-        default: return result.daily?.count ?? 0
+        default: return viewModel.getDailyCount()
         }
     }
 
