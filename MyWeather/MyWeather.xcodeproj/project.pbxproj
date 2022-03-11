@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		350C585F27DA57C200BB5C61 /* UITableView+register+dequeueReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350C585E27DA57C200BB5C61 /* UITableView+register+dequeueReusableCell.swift */; };
+		350C586127DB50D400BB5C61 /* MainVCModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350C586027DB50D400BB5C61 /* MainVCModelDelegate.swift */; };
 		351FC9EE27D015BB001F3430 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351FC9ED27D015BB001F3430 /* MainViewModel.swift */; };
 		351FC9F027D02CFB001F3430 /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351FC9EF27D02CFB001F3430 /* CityViewModel.swift */; };
 		35650EFD27BFEF6000A83A99 /* WeatherCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35650EF727BFEF5F00A83A99 /* WeatherCoreData+CoreDataClass.swift */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		350C585E27DA57C200BB5C61 /* UITableView+register+dequeueReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+register+dequeueReusableCell.swift"; sourceTree = "<group>"; };
+		350C586027DB50D400BB5C61 /* MainVCModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCModelDelegate.swift; sourceTree = "<group>"; };
 		351FC9ED27D015BB001F3430 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		351FC9EF27D02CFB001F3430 /* CityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewModel.swift; sourceTree = "<group>"; };
 		35650EF727BFEF5F00A83A99 /* WeatherCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeatherCoreData+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				357D5F6027BBD9C600223A1F /* CityDelegate.swift */,
+				350C586027DB50D400BB5C61 /* MainVCModelDelegate.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				357D5F5C27B85F6800223A1F /* SectionHeader.swift in Sources */,
 				351FC9EE27D015BB001F3430 /* MainViewModel.swift in Sources */,
 				357DE12A27CC2D7F00972751 /* NSSet.swift in Sources */,
+				350C586127DB50D400BB5C61 /* MainVCModelDelegate.swift in Sources */,
 				35650F0127BFEF6000A83A99 /* CurrentCoreData+CoreDataClass.swift in Sources */,
 				357D5F4227B85C4200223A1F /* MainVC.swift in Sources */,
 				357D5F5227B85E4000223A1F /* WeatherResponse.swift in Sources */,

@@ -8,10 +8,10 @@ import CoreData
 // MARK: - MainViewModelProtocol
 
 protocol MainViewModelProtocol: NSObject {
+    var delegate: MainVCModelDelegate? { get set }
     var city: String { get set }
     var result: WeatherCoreData? { get set }
     var updateLocation: Bool { get set }
-    var showAllert: ((_: String , _: String) -> Void)? { get set }
     var reloadData: (() -> Void)? { get set }
 }
 
@@ -20,7 +20,7 @@ final class MainViewModel: NSObject, MainViewModelProtocol {
     
     // MARK: - Properties
     
-    var showAllert: ((_: String , _: String) -> Void)?
+    var delegate: MainVCModelDelegate?
     var reloadData: (() -> Void)?
     var updateLocation = true
     private var locationManager = CLLocationManager()
@@ -28,7 +28,7 @@ final class MainViewModel: NSObject, MainViewModelProtocol {
     private var fetchedResultsController: NSFetchedResultsController<WeatherCoreData>!
     
     var result: WeatherCoreData? {
-        didSet { reloadData?() }
+        didSet { delegate?.mainVCCollectionViewReloadData() }
         }
     
     var city: String = "" {
@@ -36,7 +36,7 @@ final class MainViewModel: NSObject, MainViewModelProtocol {
             self.updateLocation = false
             networcManager.fetchWeatherWithCity(sity: city) { Weather, error in
                 if let error = error {
-                    self.showAllert?("Sorry", "\(error)")
+                    self.delegate?.mainVCShowAllert(title: "Sorry", message: "\(error)")
                 } else if let Weather = Weather {
                     Weather.createCoreDataWeather(active: false) { coreWeather in
                         self.result = coreWeather
@@ -117,7 +117,7 @@ extension MainViewModel: CLLocationManagerDelegate  {
                     }
                     self.locationManager.stopUpdatingLocation()
                 } else if let error = error {
-                    self.showAllert?("Sorry", "\(error)")
+                    self.delegate?.mainVCShowAllert(title: "Sorry", message: "\(error)")
                 }
             }
         }

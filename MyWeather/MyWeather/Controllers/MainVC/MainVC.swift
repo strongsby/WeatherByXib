@@ -73,7 +73,7 @@ final class MainVC: UIViewController {
         viewModel.reloadData = { [weak self] in
             self?.collectionView.reloadData()
         }
-        viewModel.showAllert = self.showAlert(title:message:)
+        viewModel.delegate = self
     }
 
     // MARK: - Lifecycle
@@ -184,7 +184,15 @@ extension MainVC: CityDelegate {
 extension MainVC: AlertHandler { }
 
 
-
+extension MainVC: MainVCModelDelegate {
+    func mainVCShowAllert(title: String, message: String) {
+        showAlert(title: title, message: message)
+    }
+    
+    func mainVCCollectionViewReloadData() {
+        collectionView.reloadData()
+    }
+}
 
 
 
