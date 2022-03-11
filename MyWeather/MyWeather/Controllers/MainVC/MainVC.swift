@@ -192,4 +192,5 @@ extension MainVC: MainVCModelDelegate {
 }
 
 
+extension MainVC: WeatherNibLoadable {}
 

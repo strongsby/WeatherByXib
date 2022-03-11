@@ -131,7 +131,7 @@ extension CityVC: CityVCModelDelegate {
     }
     
     func cityVCShowMainVC(city: String) {
-        let mainVC = MainVC(nibName: "\(MainVC.self)", bundle: nil)
+        let mainVC = MainVC()          
         mainVC.viewModel = MainViewModel(city: city)
         self.searchBar.text = nil
         self.searchBar.resignFirstResponder()
