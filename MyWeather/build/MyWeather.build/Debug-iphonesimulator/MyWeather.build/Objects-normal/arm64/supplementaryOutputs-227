@@ -1,0 +1,20 @@
+"/Users/sergo/WeatherByXib/MyWeather/MyWeather/Models/CoreDataModels/CurrentCoreData+CoreDataClass.swift":
+  swift-dependencies: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/CurrentCoreData+CoreDataClass.swiftdeps"
+  diagnostics: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/CurrentCoreData+CoreDataClass.dia"
+  object: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/CurrentCoreData+CoreDataClass.o"
+  dependencies: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/CurrentCoreData+CoreDataClass.d"
+"/Users/sergo/WeatherByXib/MyWeather/MyWeather/Helpers/NSSet.swift":
+  dependencies: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/NSSet.d"
+  swift-dependencies: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/NSSet.swiftdeps"
+  object: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/NSSet.o"
+  diagnostics: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/NSSet.dia"
+"/Users/sergo/WeatherByXib/MyWeather/MyWeather/Helpers/WeatherNibLoadable.swift":
+  object: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/WeatherNibLoadable.o"
+  dependencies: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/WeatherNibLoadable.d"
+  diagnostics: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/WeatherNibLoadable.dia"
+  swift-dependencies: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/WeatherNibLoadable.swiftdeps"
+"/Users/sergo/WeatherByXib/MyWeather/MyWeather/Delegate/MainVCModelDelegate.swift":
+  object: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/MainVCModelDelegate.o"
+  swift-dependencies: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/MainVCModelDelegate.swiftdeps"
+  dependencies: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/MainVCModelDelegate.d"
+  diagnostics: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/MainVCModelDelegate.dia"

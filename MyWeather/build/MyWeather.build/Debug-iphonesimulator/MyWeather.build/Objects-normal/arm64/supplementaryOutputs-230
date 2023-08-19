@@ -1,0 +1,20 @@
+"/Users/sergo/WeatherByXib/MyWeather/MyWeather/Models/CoreDataModels/DailyCoreData+CoreDataClass.swift":
+  swift-dependencies: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/DailyCoreData+CoreDataClass.swiftdeps"
+  object: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/DailyCoreData+CoreDataClass.o"
+  diagnostics: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/DailyCoreData+CoreDataClass.dia"
+  dependencies: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/DailyCoreData+CoreDataClass.d"
+"/Users/sergo/WeatherByXib/MyWeather/MyWeather/Controllers/MainVC/Cells/DailyViewCell/DailyViewCell.swift":
+  object: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/DailyViewCell.o"
+  dependencies: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/DailyViewCell.d"
+  swift-dependencies: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/DailyViewCell.swiftdeps"
+  diagnostics: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/DailyViewCell.dia"
+"/Users/sergo/WeatherByXib/MyWeather/MyWeather/Services/API.swift":
+  diagnostics: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/API.dia"
+  swift-dependencies: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/API.swiftdeps"
+  object: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/API.o"
+  dependencies: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/API.d"
+"/Users/sergo/WeatherByXib/MyWeather/MyWeather/Controllers/MainVC/Cells/HourlyViewCell/HourlyViewCell.swift":
+  diagnostics: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/HourlyViewCell.dia"
+  dependencies: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/HourlyViewCell.d"
+  swift-dependencies: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/HourlyViewCell.swiftdeps"
+  object: "/Users/sergo/WeatherByXib/MyWeather/build/MyWeather.build/Debug-iphonesimulator/MyWeather.build/Objects-normal/arm64/HourlyViewCell.o"

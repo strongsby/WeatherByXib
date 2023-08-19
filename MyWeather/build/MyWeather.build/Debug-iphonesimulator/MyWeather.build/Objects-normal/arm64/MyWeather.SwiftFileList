@@ -1,0 +1,32 @@
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/Services/CoreDataService.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/Controllers/CityVC/CityViewModel.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/Delegate/CityDelegate.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/Helpers/AlertHandler.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/Helpers/DateFormator.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/Controllers/CityVC/Cells/Cell.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/Controllers/MainVC/Cells/SectionHeader/SectionHeader.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/Controllers/MainVC/MainViewModel.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/Helpers/NSSet.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/Delegate/MainVCModelDelegate.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/Models/CoreDataModels/CurrentCoreData+CoreDataClass.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/Helpers/WeatherNibLoadable.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/Controllers/MainVC/MainVC.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/Models/WeatherResponse.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/GlobalSettings/UIColor+Default.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/Helpers/CollectionView+Reusable.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/Helpers/UITableView+register+dequeueReusableCell.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/Models/CoreDataModels/WeatherCoreData+CoreDataClass.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/Delegate/CityVCModelDelegate.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/Controllers/MainVC/Cells/HourlyViewCell/HourlyViewCellCell/HourlyViewCellCell.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/Controllers/MainVC/Cells/DailyViewCell/DailyViewCell.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/Services/API.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/Controllers/MainVC/Cells/HourlyViewCell/HourlyViewCell.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/Models/CoreDataModels/DailyCoreData+CoreDataClass.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/Models/CoreDataModels/DailyCoreData+CoreDataProperties.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/Models/CoreDataModels/WeatherCoreData+CoreDataProperties.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/Services/NetworkManager.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/GlobalSettings/GlobalSettings.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/Controllers/CityVC/CityVC.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/Supporting\ files/AppDelegate.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/Models/CoreDataModels/CurrentCoreData+CoreDataProperties.swift
+/Users/sergo/WeatherByXib/MyWeather/MyWeather/Supporting\ files/SceneDelegate.swift
