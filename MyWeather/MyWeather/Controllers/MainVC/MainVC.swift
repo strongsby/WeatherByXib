@@ -6,6 +6,8 @@ import CoreData
 
 final class MainVC: UIViewController {
 
+    //Test
+    
     // MARK: - Outlets
     
     @IBOutlet private weak var nameCityLable: UILabel!
