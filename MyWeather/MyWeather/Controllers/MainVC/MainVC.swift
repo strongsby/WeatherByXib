@@ -8,6 +8,8 @@ final class MainVC: UIViewController {
 
     //Test
     
+    //reset
+    
     // MARK: - Outlets
     
     @IBOutlet private weak var nameCityLable: UILabel!
