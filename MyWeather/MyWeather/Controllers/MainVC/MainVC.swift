@@ -6,9 +6,6 @@ import CoreData
 
 final class MainVC: UIViewController {
 
-    //Test
-    
-    //reset
     
     // MARK: - Outlets
     
